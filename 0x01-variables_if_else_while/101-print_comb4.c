@@ -11,7 +11,7 @@ int main(void)
 	int j;
 	int k;
 
-	for (i = 0 ; i < 10 ; i++)
+	for (i = 0 ; i < 8 ; i++)
 	{
 		for (j = 1 ; j < 10 ; j++)
 		{
@@ -22,7 +22,7 @@ int main(void)
 					putchar(i + '0');
 					putchar(j + '0');
 					putchar(k + '0');
-					if (i + k + j != 24)
+					if (i + j + k != 24)
 					{
 						putchar(',');
 						putchar(' ');

@@ -3,6 +3,7 @@
 /**
  * _islower - shearch for a lower case alphabete
  * Return: 0 or 1
+ * @c: parameter to be printed
  */
 int _islower(int c)
 {

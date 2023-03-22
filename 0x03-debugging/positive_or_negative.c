@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * positive_or_negative - check the nuber if its positive or negative

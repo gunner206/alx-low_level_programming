@@ -10,7 +10,7 @@ void puts2(char *str)
 
 	for (i = 0 ; str[i] != '\0' ; i++)
 	{
-		if (str[i] == '\0')
+		if (str[i] == '\\')
 			_putchar('\n');
 		else
 			 _putchar(str[i]);

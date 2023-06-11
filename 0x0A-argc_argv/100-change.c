@@ -31,6 +31,11 @@ int main(int argc, char **argv)
 				break;
 			}
 		}
+		if (money < 0)
+		{
+			printf("0\n");
+			return (0);
+		}
 	}
 	printf("%d\n", leastcents);
 	return (0);

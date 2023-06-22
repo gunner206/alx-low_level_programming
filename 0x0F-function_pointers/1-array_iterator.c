@@ -4,15 +4,18 @@
  * array_iterator - execites fun in each element of arr
  * @array: array elements
  * @size: size of array
- * action: func to be executed
+ * @action: func to be executed
  * Return: void
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	size_t i;
 
-	for (i = 0 ; i < size ; i++)
+	if (array && action)
 	{
-		action(array[i]);
+		for (i = 0 ; i < size ; i++)
+		{
+			action(array[i]);
+		}
 	}
 }

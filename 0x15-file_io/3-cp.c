@@ -71,6 +71,7 @@ int main(int argc, char *argv[])
 		if (fd2 == -1 || w == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			free(buffer);
 			exit(99);
 		}
 		r = read(fd1, buffer, 1024);

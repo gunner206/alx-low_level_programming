@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 	int fd2;
 	int r;
 	int w;
-	char buffer[BUFFER_SIZE];
+	char *buffer[BUFFER_SIZE];
 
 	if (argc != 3)
 	{

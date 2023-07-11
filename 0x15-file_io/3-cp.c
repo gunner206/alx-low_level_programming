@@ -27,8 +27,6 @@ void close_file(int fd)
  */
 int main(int argc, char *argv[])
 {
-	char *file_from = argv[1];
-	char *file_to = argv[2];
 	int fd1;
 	int fd2;
 	int r;
@@ -40,9 +38,9 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	fd1 = open(file_from, O_RDONLY);
+	fd1 = open(argv[1], O_RDONLY);
 	r = read(fd1, buffer, BUFFER_SIZE);
-	fd2 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	fd2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	do {
 		if (fd1 == -1 || r == -1)
 		{
@@ -56,7 +54,7 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 		r = read(fd1, buffer, BUFFER_SIZE);
-		fd2 = open(file_to, O_WRONLY | O_APPEND);
+		fd2 = open(argv[2], O_WRONLY | O_APPEND);
 	} while (r > 0);
 
 	close_file(fd1);
